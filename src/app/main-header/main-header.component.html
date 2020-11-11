@@ -1,0 +1,68 @@
+<div class="container">
+
+    <!-- sign-up part -->
+    <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">가입하기</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">아이디</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="아이디" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">비밀번호</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="비밀번호" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">제출하기</button>
+        </div>
+      </ng-template>
+      <button class="btn btn-lg btn-outline-primary" (click)="open(content)">가입</button>
+
+    <!-- sign-in part -->
+    <ng-template #content1 let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">로그인</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">아이디</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="아이디" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">비밀번호</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="비밀번호" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">로그인</button>
+        </div>
+      </ng-template>
+      <button class="btn btn-lg btn-outline-secondary" (click)="open(content1)">로그인</button>
+
+</div>
+
